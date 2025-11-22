@@ -14,6 +14,6 @@ RUN mvn clean package -DskipTests
 # Etapa 2: runtime
 FROM amazoncorretto:25
 WORKDIR /app
-COPY --from=build /app/target/comunicavet-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/target/agendamento-0.0.1-SNAPSHOT.jar .
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app/comunicavet-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/agendamento-0.0.1-SNAPSHOT.jar"]
